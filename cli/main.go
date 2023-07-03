@@ -224,6 +224,9 @@ func main() {
 	cc, _ := s.Get(currentContext)
 	if cc != nil {
 		ctype = cc.Type()
+		if _, ok := cc.Metadata.AdditionalFields["otel"]; ok {
+			_ = os.Setenv("COMPOSE_EXPERIMENTAL_OTEL", "1")
+		}
 	}
 	ctx = context.WithValue(ctx, config.ContextTypeKey, ctype)
 
