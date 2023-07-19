@@ -59,10 +59,11 @@ type cliversion struct {
 
 // CommandUsage reports a CLI invocation for aggregation.
 type CommandUsage struct {
-	Command string `json:"command"`
-	Context string `json:"context"`
-	Source  string `json:"source"`
-	Status  string `json:"status"`
+	Command      string  `json:"command"`
+	Context      string  `json:"context"`
+	Source       string  `json:"source"`
+	Status       string  `json:"status"`
+	DurationSecs float64 `json:"duration_secs,omitempty"`
 }
 
 // CLISource is sent for cli metrics
