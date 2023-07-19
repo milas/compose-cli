@@ -64,6 +64,7 @@ type CommandUsage struct {
 	Source       string  `json:"source"`
 	Status       string  `json:"status"`
 	DurationSecs float64 `json:"duration_secs,omitempty"`
+	ExitCode     int     `json:"exit_code"`
 }
 
 // CLISource is sent for cli metrics

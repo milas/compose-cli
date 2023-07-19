@@ -136,5 +136,6 @@ func NewCommandUsage(cmd CmdResult) *CommandUsage {
 		Context:      cmd.ContextType,
 		Status:       cmd.Status,
 		DurationSecs: cmd.Duration.Seconds(),
+		ExitCode:     cmd.ExitCode,
 	}
 }
